@@ -38,6 +38,15 @@ jobs:
           path: |
             .
             !venv/
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v2
+        with:
+          languages: python
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v2
+
   deploy:
     runs-on: ubuntu-20.04
     needs: build
