@@ -1,10 +1,12 @@
+flask --app=main.py run --host=0.0.0.0 --port=8000
+[13:20]
 from flask import Flask
 
-app = Flask(__name__)
+app = Flask(name)
 
 @app.route('/')
 def hello_world():
-    return 'Hello, bu!'
+    return 'Hello,Bu'
 
-if __name__ == '__main__':
-    app.run(debug=True, port=80)
+if name == 'main':
+    app.run(debug=True,port=80)
